@@ -2,8 +2,31 @@ import aiohttp
 import statistics
 
 
-BINANCE_URL = "https://api.binance.com"
+COINGECKO_URL = "https://api.coingecko.com/api/v3"
 
+
+COIN_IDS = {
+    "BTC": "bitcoin",
+    "ETH": "ethereum",
+    "BNB": "binancecoin",
+    "SOL": "solana",
+    "XRP": "ripple",
+    "ADA": "cardano",
+    "DOGE": "dogecoin",
+    "TRX": "tron",
+    "AVAX": "avalanche-2",
+    "DOT": "polkadot",
+    "LINK": "chainlink",
+    "MATIC": "matic-network",
+    "LTC": "litecoin",
+    "BCH": "bitcoin-cash",
+    "ATOM": "cosmos",
+    "ETC": "ethereum-classic",
+    "UNI": "uniswap",
+    "XLM": "stellar",
+    "NEAR": "near",
+    "APT": "aptos",
+}
 
 async def binance_request(endpoint, params=None):
 
